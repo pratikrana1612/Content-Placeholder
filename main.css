@@ -12,6 +12,8 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    color:white;
 }
 #main_section
 {
@@ -32,7 +34,7 @@ body{
 {
     width:100%;
     height:100%;
-    background-image: url('photo-1496181133206-80ce9b88a853.avif');
+    background-image: url('images/photo-1496181133206-80ce9b88a853.avif');
     background-size:cover;
     background-position: center;
 }
@@ -59,7 +61,7 @@ body{
 }
 .profile .profile_img
 {
-    background-image: url('45.jpg');
+    background-image: url('images/45.jpg');
     background-size:contain;
     background-position: center;
     height:50px;
@@ -69,24 +71,26 @@ body{
     position:relative;
    
 }
-.profile b
+.profile .profile_info 
 {
     display:inline-block;
-    margin:0.5rem;
-    margin-bottom:0.3rem;
     position:relative;
+    margin-left:1rem;
 }
-.profile span
+.profile .profile_info  b
 {
     display:inline-block;
-    margin-left:0.5rem;
+    margin:0.5rem 0.5rem 0.3rem 0;
+}
+.profile .profile_info span
+{
+    display:inline-block;
     color:rgba(204, 203, 203, 0.516);
     font-size:0.8rem;
-    position:relative;
 }
 .placeholder
 {
-    background:#f3f3f3;
+    background:rgb(144, 140, 140);
     width:100%;
     height:100%;
     position: absolute;
@@ -95,7 +99,7 @@ body{
 }
 .span
 {
-    background:linear-gradient(to right,transparent 5%,#fffffffc 10%,transparent 30%);
+    background:linear-gradient(to right,transparent 5%,rgba(112, 107, 107, 0.337) 10%,transparent 30%);
     width:100%;
     height:100%;
     position: absolute;
@@ -103,23 +107,45 @@ body{
     left:0;
     z-index:3;
     animation: backgroundChanger 1s linear infinite;
+    background-color: rgba(112, 107, 107, 0.337);
 }
+
 @keyframes backgroundChanger
 {
     0% 
     {
-        background:linear-gradient(to right,transparent 5%,#fffffffc 10%,transparent 30%);
+        background:linear-gradient(to right,transparent 5%,rgba(112, 107, 107, 0.337) 10%,transparent 30%);
     }
     25%
     {
-        background:linear-gradient(to right,transparent 10%,#fffffffc 30%,transparent 40%);
+        background:linear-gradient(to right,transparent 10%,rgba(112, 107, 107, 0.337) 30%,transparent 40%);
     }
     50% , 75%
     {
-        background:linear-gradient(to right,transparent 40%,#fffffffc 60%,transparent 70%);
+        background:linear-gradient(to right,transparent 40%,rgba(112, 107, 107, 0.337) 60%,transparent 70%);
     }
     50% , 75%
     {
-        background:linear-gradient(to right,transparent 50%,#fffffffc 90%,transparent 100%);
+        background:linear-gradient(to right,transparent 50%,rgba(112, 107, 107, 0.337) 90%,transparent 100%);
     }
 }   
+
+@media (max-width:25rem)
+{
+    #main_section
+    {
+        width:250px;
+    }
+    .profile{
+        margin-top:0.5rem;
+    }
+    .description h4
+    {
+        font-size:1rem;
+        margin-bottom:0.7rem;
+    }
+    .description p
+    {
+        margin:0;
+    }
+}
