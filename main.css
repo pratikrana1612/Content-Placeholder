@@ -107,7 +107,7 @@ body{
     left:0;
     z-index:3;
     animation: backgroundChanger 1s linear infinite;
-    background-color: rgba(112, 107, 107, 0.337);
+    /* background-color: rgba(112, 107, 107, 0.337); */
 }
 
 @keyframes backgroundChanger
